@@ -21,10 +21,10 @@ display_message()
     local result=""
 
     size=${#MESSAGE}
-    loopSize=`expr ${MAX_SIZE} - ${size}`
+    paddingSize=`expr ${MAX_SIZE} - ${size}`
 
     if [ ${size} -lt ${MAX_SIZE} ]; then
-        for i in $(seq 0 ${loopSize})
+        for i in $(seq 0 ${paddingSize})
         do
             padding+=" "
         done
